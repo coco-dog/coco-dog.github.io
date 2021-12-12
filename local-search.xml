@@ -4,19 +4,6 @@
   
   
   <entry>
-    <title>elasticsearch安装过程</title>
-    <link href="/2021/12/11/elasticsearch%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/"/>
-    <url>/2021/12/11/elasticsearch%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</url>
-    
-    <content type="html"><![CDATA[<h2 id="elasticsaerch安装"><a href="#elasticsaerch安装" class="headerlink" title="elasticsaerch安装"></a>elasticsaerch安装</h2><p>下载地址：<a href="https://www.elastic.co/cn/downloads/elasticsearch" target="_blank">elasticsearch</a></p><p>解压到/usr/local中,输入命令</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/elasticsearch/</span>bin<br>./elasticsearch<br></code></pre></td></tr></table></figure><p>访问端口为9200</p><h2 id="elasticsearch-head安装"><a href="#elasticsearch-head安装" class="headerlink" title="elasticsearch-head安装"></a>elasticsearch-head安装</h2><p>下载地址：<a href="https://github.com/mobz/elasticsearch-head" target="_blank">elasticsearch-head</a></p><p>下载完压缩包解压到/usr/local中,输入命令</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd <span class="hljs-regexp">/usr/</span>local/elasticsearch-head<br>cnpm install<br></code></pre></td></tr></table></figure><p>安装完成依赖后在elasticsearch中的配置文件中配置解决跨域问题</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/elasticsearch/</span>config<br>vim elasticsearch.yml<br><span class="hljs-comment">#输入跨域访问</span><br>http.cors.enabled: true<br>http.cors.allow-origin: <span class="hljs-string">&quot;*&quot;</span><br></code></pre></td></tr></table></figure><p>接下来启动elasticsearch</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">cd</span> /usr/local/elastic<span class="hljs-built_in">search-head</span><br>npm run <span class="hljs-built_in">start</span><br></code></pre></td></tr></table></figure><p>访问端口为9100</p><h2 id="安装kibana"><a href="#安装kibana" class="headerlink" title="安装kibana"></a>安装kibana</h2><p>下载地址: <a href="https://www.elastic.co/cn/downloads/kibana" target="_blank">kibana</a></p><p>下载完压缩包解压到/usr/local中，输入命令</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/kibana/</span>bin<br>./kibana<br><br></code></pre></td></tr></table></figure><p>访问端口为5601</p><p>需要汉化可以在配置文件中输入以下命令</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/kibana/</span>config<br>vim kibana.yml<br><span class="hljs-comment">#汉化</span><br>i18n.locale: <span class="hljs-string">&quot;zh-CN&quot;</span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>我的第一篇博客</title>
     <link href="/2021/12/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
     <url>/2021/12/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
