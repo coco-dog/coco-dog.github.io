@@ -23,12 +23,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="JWT快速入门什么是JWT在以前的学习中，我们知道session和cookie是为了记录客户端的状态，可以说是为了鉴权，就好比没有vip就不能听一些周董的歌，这些权利就需要通过cookie和session方式进行判断 今天介绍另一种鉴权技术token，回顾一下session，后端通过session创建的sid发送到前端cookie(一般是由cookie接收，也有其他方案)，第一次客户端发起请求会携">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/coco-dog/coco-dog.github.io/tree/master/img/jwt.png">
+<meta property="og:image" content="https://gitee.com/coco-dog/img/jwt.png">
 <meta property="article:published_time" content="2021-12-15T16:25:24.000Z">
-<meta property="article:modified_time" content="2021-12-15T16:29:49.018Z">
+<meta property="article:modified_time" content="2021-12-15T16:54:13.243Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://github.com/coco-dog/coco-dog.github.io/tree/master/img/jwt.png">
+<meta name="twitter:image" content="https://gitee.com/coco-dog/img/jwt.png">
   
   <title>JWT快速入门 - Hexo</title>
 
@@ -272,7 +272,7 @@
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">public void parse<span class="hljs-literal">()</span>&#123;<br>        String token = <span class="hljs-string">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ind6eiIsImFnZSI6IjMwIiwiZXhwIjoxNjM5NTg0OTY5LCJqdGkiOiI4MDIyMzAyNi0zOGEwLTQzOTgtOTdhNC0yZjAzZTQxZGY5MGYifQ.0UH68OWOKHQHSB5cTo5C50o8Gb9jdBJyU0I58xweUOE&quot;</span>;<br>        JwtParser parser = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Jwts</span>.</span></span>parser<span class="hljs-literal">()</span>;<br>        Jws&lt;Claims&gt; claimsJws = parser.set<span class="hljs-constructor">SigningKey(<span class="hljs-params">signature</span>)</span>.parse<span class="hljs-constructor">ClaimsJws(<span class="hljs-params">token</span>)</span>;<br>        Claims body = claimsJws.get<span class="hljs-constructor">Body()</span>;<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(body.get(<span class="hljs-string">&quot;username&quot;</span>));<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(body.get(<span class="hljs-string">&quot;age&quot;</span>));<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(body.get<span class="hljs-constructor">Id()</span>);<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.println(body.get<span class="hljs-constructor">Expiration()</span>);<br>    &#125;<br>    <br> <br>wzz<br><span class="hljs-number">30</span><br><span class="hljs-number">80223026</span>-<span class="hljs-number">38</span>a0-<span class="hljs-number">4398</span>-<span class="hljs-number">97</span>a4-<span class="hljs-number">2</span>f03e41df90f<br>Thu Dec <span class="hljs-number">16</span> <span class="hljs-number">00</span>:<span class="hljs-number">16</span>:<span class="hljs-number">09</span> CST <span class="hljs-number">2021</span><br><br></code></pre></td></tr></table></figure>
 
 <p>有效的token可以直接解析出载荷中的值</p>
-<p><img src="https://github.com/coco-dog/coco-dog.github.io/tree/master/img/jwt.png" srcset="/img/loading.gif" lazyload alt="jwt"></p>
+<p><img src="https://gitee.com/coco-dog/img/jwt.png" srcset="/img/loading.gif" lazyload alt="jwt"></p>
 <p>JWT的工作流程就是这样，觉得不错的可以给我的仓库点个赞<a target="_blank" rel="noopener" href="https://github.com/coco-dog/coco-dog.github.io">https://github.com/coco-dog/coco-dog.github.io</a></p>
 
             </div>
